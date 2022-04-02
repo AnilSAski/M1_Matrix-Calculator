@@ -47,3 +47,34 @@ Transmission line are nothing but a long conductors laid either over head or und
 - Input 5-> Capacitive suceptance(Enter in mho)
 - Input 6-> Power factor(0<pf<1)
 - Input 7-> Length of line(Enter in Km)
+## SWOT ANALYSIS
+# 4W's and 1'H
+## Who:
+- Transco and Distribution companies whose main focus on constructing Transmission lines
+## What:
+- Many Transmission Line are inefficient due to prolonged time for testing the efficiency of the transmission line manually.This project gives the oopurtunity to compute all the required parameters and deploy into real world with more efficiency
+## When:
+- With the increasing population demand for Electric power also increased exponentially.
+- With the increase in power demand,increased the problem to design the efficient transmision system to reduce the power loss across india
+## Where:
+- This problem is surfaced in all states of Indi
+## How:
+- This project takes in all the design input values and yields out the Line parameters.
+# Detail requirements
+## High Level Requirements:
+| ID | Description | Category | Status |
+| -- | -- | -- | -- |
+HR01|User has a menu for selecting the type of transmission line|Technical|Implemented
+HR02|	Requires the input from the user for Short transmission line|Technical|Implemented
+HR03|	Requires the input from the user for Medium(Nominal Pi) transmission line|Technical|Implemented
+HR04|	Requires the input from the user for Medium(Nominal T) transmission line|Technical|Implemented
+HR05|	Requires the input from the user for Long transmission line|Technical|Implemented
+## Low level Requirements:
+| ID | Description |  HR ID  | Status |
+| -- | -- | -- | -- |
+LR01|	Small menu should be created for the user to interact.A switch case statement to get the option for the user to select the type of transmission line.|HR01|Implemented
+LR02|		A function to calculate the complex addition.And magnitude of complex number is required to compute the function shortLine|HR02|Implemented
+LR03|		A function to calculate the complex addition.And magnitude of complex number and complex multiplication function is required to compute the function MediumPiLine|HR03|Implemented
+LR04|		A function to calculate the complex addition.And magnitude of complex number and complex multiplication function is required to compute the function MediumTLine|HR04|Implemented
+LR05|	Requires all the complex number arthimetic functions HR05.|HR05|Implemented
+
