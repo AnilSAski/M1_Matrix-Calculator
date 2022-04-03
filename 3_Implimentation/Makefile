@@ -11,6 +11,10 @@ unity/unity.c
 INC = -Iinc\
 -Iunity
 
+DOCUMENTATION_OUTPUT = documentation/html\
+documentation/latex\
+
+
 ifdef OS
    RM = del /q
    FixPath = $(subst /,\,$1)
@@ -35,6 +39,8 @@ test: $(SRC) $(TEST_SRC)
 	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
+
+
 coverage:${PROJECT_NAME}
 	gcc $(INC) -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) -o $(call FixPath,$(BUILD_DIR)/$(COVERAGE_PROJ_NAME).$(EXEC))
 	$(call FixPath,$(BUILD_DIR)/$(COVERAGE_PROJ_NAME).$(EXEC))
@@ -42,12 +48,11 @@ coverage:${PROJECT_NAME}
 cpp:
 		cppcheck enable=all $(SRC) main.c 
 doc:
-	make -C docmak
+	make -C documentation
 
 clean:
-	$(RM) $(call FixPath,$(BUILD_DIR)/*)
 	
-	rmdir $(BUILD_DIR) doc/html
+	rm -rf $(BUILD_DIR) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
