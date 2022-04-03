@@ -46,7 +46,7 @@ coverage:$(PROJECT_NAME) $(BUILD_DIR)
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	gcov -a $(SRC) $(TEST_SRC)
 cpp:
-		cppcheck enable=all $(SRC) main.c 
+		cppcheck enable=all $(SRC)line_para.c main.c 
 doc:
 	make -C documentation
 
