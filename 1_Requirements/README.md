@@ -48,7 +48,7 @@ Transmission line are nothing but a long conductors laid either over head or und
 - Input 6-> Power factor(0<pf<1)
 - Input 7-> Length of line(Enter in Km)
 ## SWOT ANALYSIS
-![SWOT-Sample]()
+![SWOT-Sample](https://github.com/AnilSAski/M1_Transmission_line_parameters/blob/main/1_Requirements/swot%20analysis.png)
 # 4W's and 1'H
 ## Who:
 - Transco and Distribution companies whose main focus on constructing Transmission lines
