@@ -35,7 +35,7 @@ all:$(BUILD_DIR)
 run: all
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-test: $(SRC) $(TEST_SRC)
+test: $(BUILD_DIR) $(SRC) $(TEST_SRC)
 	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
