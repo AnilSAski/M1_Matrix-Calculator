@@ -3,7 +3,8 @@ TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
 
-SRC = src/line_para.c
+SRC = main.c\
+	src/line_para.c\
 
 TEST_SRC = test/test_para.c\
 unity/unity.c
@@ -46,7 +47,7 @@ coverage:$(PROJECT_NAME) $(BUILD_DIR)
 	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	gcov -a $(SRC) $(TEST_SRC)
 cpp:
-		cppcheck enable=all $(SRC) main.c 
+		cppcheck enable=all $(SRC)
 doc:
 	make -C documentation
 
