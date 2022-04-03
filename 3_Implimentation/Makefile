@@ -42,8 +42,8 @@ test: $(BUILD_DIR) $(SRC) $(TEST_SRC)
 
 
 coverage:${PROJECT_NAME}
-	gcc $(INC) -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) -o $(call FixPath,$(BUILD_DIR)/$(COVERAGE_PROJ_NAME).$(EXEC))
-	$(call FixPath,$(BUILD_DIR)/$(COVERAGE_PROJ_NAME).$(EXEC))
+	gcc $(INC) -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 	gcov -a $(SRC) $(TEST_SRC)
 cpp:
 		cppcheck enable=all $(SRC) main.c 
